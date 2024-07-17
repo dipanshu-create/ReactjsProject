@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       {/* Accordian component */}
-      <Accordian>jj</Accordian>  
+      <Accordian>jASDFASDFj</Accordian>  
     </div>
   );
 }
