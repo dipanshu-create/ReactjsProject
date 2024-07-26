@@ -11,6 +11,7 @@ export default function Accordian() {
             <div className="item">
               <div className="title">
                 <h3> {dataItem.question}</h3>
+                <span>+</span>
               </div>
             </div>
           ))
