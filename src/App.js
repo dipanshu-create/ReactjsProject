@@ -14,6 +14,7 @@ function App() {
       {/* Random color component */}
       {/*<RandomColor />*/}
       {/*<StarRating />*/}
+
       {
         <ImageSlider
           url={"https://picsum.photos/v2/list"}
