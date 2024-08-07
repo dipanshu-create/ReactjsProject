@@ -9,6 +9,7 @@ import LoadMoreData from "./components/load-more-button";
 import TreeView from "./components/tree-view";
 
 import { menus } from "./components/tree-view/data";
+import QRCodeGenerator from "./components/qr-code-generator";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           limit={"10"}
         /> */}
       {/*<LoadMoreData />*/}
-      {<TreeView menu={menus} />}
+      {/*<TreeView menu={menus} />*/}
+      {<QRCodeGenerator />}
     </div>
   );
 }
