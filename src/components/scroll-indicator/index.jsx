@@ -35,7 +35,7 @@ export default function ScrollIndicator({ url }) {
   }, []);
   return (
     <div>
-      <h1>custom scroll indicator</h1>
+      <h1>custom scroll indicator built in </h1>
       <div className="data-container">
         {data && data.length > 0
           ? data.map((dataItem) => <p>{dataItem.title}</p>)
