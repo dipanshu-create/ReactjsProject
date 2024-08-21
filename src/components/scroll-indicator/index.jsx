@@ -28,7 +28,7 @@ export default function ScrollIndicator({ url }) {
   }, [url]);
 
   function handleScrollPercentage(){
-    console.log(document.body.scrollTop,document.documentElement.scrollTop)
+    console.log(document.body.scrollTop,document.documentElement.scrollTop,document.documentElement.scrollHeight)
   }
 
   useEffect(() => {
