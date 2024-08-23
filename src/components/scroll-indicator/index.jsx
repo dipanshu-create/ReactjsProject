@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./scroll.css";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -36,9 +37,13 @@ export default function ScrollIndicator({ url }) {
     );
     const howMuchScrolled =
       document.body.scrollTop || document.documentElement.scrollTop;
-  
-    }
-
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+      
+    setScrollPercentage((howMuchScrolled / height) * 100);
+  }
+console.log('scrollPercentage',scrollPercentage)
   useEffect(() => {
     window.addEventListener("scroll", handleScrollPercentage);
     return () => {
@@ -47,7 +52,15 @@ export default function ScrollIndicator({ url }) {
   }, []);
   return (
     <div>
-      <h1>custom scroll indicator built in </h1>
+      <div className="top-container">
+        <h1>custom scroll indicator built in </h1>
+        <div className="scroll-progress-tracking-container">
+          <div
+            className="current-progress-bar"
+            style={{ width: `${scrollPercentage}%` }}
+          ></div>
+        </div>
+      </div>
       <div className="data-container">
         {data && data.length > 0
           ? data.map((dataItem) => <p>{dataItem.title}</p>)
