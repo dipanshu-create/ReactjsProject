@@ -14,6 +14,8 @@ import LightDarkMode from "./components/light-dark-mode/inde";
 import ScrollIndicator from "./components/scroll-indicator";
 import Tabs from "./components/custom-tabs/tabs";
 import TabTest from "./components/custom-tabs/tab-test";
+import ModalTest from "./components/custom-modal-popup/modal-test";
+import GithubProfileFinder from "./components/github-profile-finder";
 
 function App() {
   return (
@@ -34,7 +36,9 @@ function App() {
       {/*<QRCodeGenerator />*/}
       {/*<LightDarkMode />*/}
       {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />*/}
-      {<TabTest/>}
+      {/*<TabTest/>*/}
+      {/*<ModalTest/>*/}
+      {<GithubProfileFinder/>}
     </div>
   );
 }

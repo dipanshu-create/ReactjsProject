@@ -1,5 +1,6 @@
 import React from "react";
 import Tabs from "./tabs";
+import './tabs.css'
 
 function RandomComponent(){
     return <h1>Some random content</h1>
@@ -17,11 +18,11 @@ export default function TabTest(){
         {
             label:'Tab 2',
             content:<RandomComponent/>
-        }
+        },
     ]
     function handleChange(currentTabIndex){
         console.log(currentTabIndex)
     }
 
-    return <Tabs tabsContent={tabs} onChange={{handleChange}}/>
+    return <Tabs tabsContent={tabs} onChange={handleChange}/>
 }
