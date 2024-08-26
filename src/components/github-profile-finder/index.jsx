@@ -4,7 +4,7 @@ import User from "./user";
 
 
 export default function GithubProfileFinder() {
-    const [userName,setUserName]=useState('sangammukherjee')
+    const [userName,setUserName]=useState('dipanshu-create')
     const [userData,setUserData]=useState(null)
     const [loading,setLoading]=useState(true)
 
@@ -19,7 +19,7 @@ export default function GithubProfileFinder() {
             setLoading(false)
             setUserName('')
         }
-        console.log(data)
+        
     }
     function handleSubmit() {
         fetchGithubUserData()
@@ -39,14 +39,14 @@ export default function GithubProfileFinder() {
         <input
           name="search-by-username"
           type="text"
-          placeholder="Search Github Username"
+          placeholder="Search Github Username...."
           value={userName}
           onChange={(event)=>{setUserName(event.target.value)}}
         />
         <button onClick={handleSubmit}>Search</button>
       </div>
-      console.log(userData)
-      {userData !==null ? <User users={userData} />:null}
+      
+      {userData !==null ? <User user={userData} />:null}
     </div>
   );
 }
