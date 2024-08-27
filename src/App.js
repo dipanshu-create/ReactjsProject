@@ -16,6 +16,7 @@ import Tabs from "./components/custom-tabs/tabs";
 import TabTest from "./components/custom-tabs/tab-test";
 import ModalTest from "./components/custom-modal-popup/modal-test";
 import GithubProfileFinder from "./components/github-profile-finder";
+import SearchAutocomplete from "./components/search-auto-complete";
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/*<ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />*/}
       {/*<TabTest/>*/}
       {/*<ModalTest/>*/}
-      {<GithubProfileFinder/>}
+      {/*<GithubProfileFinder/>*/}
+      {<SearchAutocomplete/>}
     </div>
   );
 }
