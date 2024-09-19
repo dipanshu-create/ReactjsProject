@@ -7,18 +7,22 @@ export const FeatureFlagsContext = createContext(null);
 export default function FeatureFlagGlobalState({ children }) {
 
   const [loading,setLoading]=useState(false)
-  const [enabledFlags,setEnabledFlags]=useState(null)
+  const [enabledFlags,setEnabledFlags]=useState({})
 
 
   async function fetchFeatureFlags(){
     try{
         //original service call
+        setLoading(true)
       const response=await featureFlagDataServiceCall()
       setEnabledFlags(response)
       console.log(response)
+      setLoading(false)
     }catch(error){
       console.log(error)
+      setLoading(false)
       throw new Error(error)
+     
     }
   }
 
@@ -27,7 +31,7 @@ export default function FeatureFlagGlobalState({ children }) {
       fetchFeatureFlags();
     },[])
     return (
-        <FeatureFlagsContext.Provider value={{enabledFlags}}>
+        <FeatureFlagsContext.Provider value={{loading,enabledFlags}}>
           {children}
         </FeatureFlagsContext.Provider>
       );
