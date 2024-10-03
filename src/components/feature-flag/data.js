@@ -2,10 +2,10 @@
 import Reacts from "react";
 
 const dummyApiResponse = {
-  showLightAndDarkMode: false,
+  showLightAndDarkMode: true,
   showTicTacToeBoard: true,
   showRandomColorGenerator: true,
-  showAccordian: false,
+  showAccordian: true,
   showTreeView: true,
 };
 
