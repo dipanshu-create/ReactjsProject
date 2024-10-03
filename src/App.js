@@ -45,8 +45,10 @@ function App() {
       {/*<GithubProfileFinder/>*/}
       {/*<SearchAutocomplete/>*/}
       {/*<TicTacToe />*/}
-      {<FeatureFlagGlobalState>
-        <FeatureFlags/></FeatureFlagGlobalState>}
+      {/*<FeatureFlagGlobalState>
+        <FeatureFlags/></FeatureFlagGlobalState>*/}
+        {/*useFetch - Custom hook*/}
+        {<useFetchHookTest />}
     </div>
   );
 }
