@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-
+import { useState,useEffect } from "react";
 
 export default function useFetch(url,options={}){
     const [data,setData]=useState(null);
@@ -16,8 +14,9 @@ export default function useFetch(url,options={}){
         setData(result)
         setError(null)
         setPending(false)
+        console.log(result)
 
-      } catch{
+      } catch(e){
         setError(`${e} some error occured`)
         setPending(false)
       } 
@@ -26,6 +25,6 @@ export default function useFetch(url,options={}){
         fetchData()
     },[url])
 
-    return [data,error,pending]
+    return {data,error,pending}
 
 }
