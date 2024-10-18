@@ -23,6 +23,7 @@ import FeatureFlags from "./components/feature-flag";
 import UseFetchHookTest from "./components/use-fetch/test";
 import UseOnclickOutisdeTest from "./components/use-outside-click";
 import useWindowResize from "./components/use-window-resize";
+import ScorllToTopAndBottom from "./components/scroll-to-top-and-bottom";
 
 
 function App() {
@@ -56,7 +57,9 @@ function App() {
         {/* Use OnClick Outside Hook Test */}
         {/*<UseOnclickOutisdeTest/>*/}
         {/* Use Window Resize Hook test */}
-        { <UseWindowResizeTest/> }
+        {/* <UseWindowResizeTest/> */}
+        {/* Scorll to Top and Bottom */}
+        {<ScorllToTopAndBottom />}
     </div>
   );
 }
