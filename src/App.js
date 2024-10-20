@@ -22,8 +22,9 @@ import FeatureFlagGlobalState from "./components/feature-flag/context";
 import FeatureFlags from "./components/feature-flag";
 import UseFetchHookTest from "./components/use-fetch/test";
 import UseOnclickOutisdeTest from "./components/use-outside-click";
-import useWindowResize from "./components/use-window-resize";
+import useWindowResizeTest from "./components/use-window-resize";
 import ScorllToTopAndBottom from "./components/scroll-to-top-and-bottom";
+import ScrolToSection from "./components/scroll-to-top-and-bottom/scroll-to-section";
 
 
 function App() {
@@ -59,7 +60,9 @@ function App() {
         {/* Use Window Resize Hook test */}
         {/* <UseWindowResizeTest/> */}
         {/* Scorll to Top and Bottom */}
-        {<ScorllToTopAndBottom />}
+        {/*<ScorllToTopAndBottom />*/}
+        {/* Scroll to a Particular Section */}
+        {<ScrolToSection/>}
     </div>
   );
 }
